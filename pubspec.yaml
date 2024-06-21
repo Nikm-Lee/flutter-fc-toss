@@ -74,6 +74,9 @@ dependencies:
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.0
 
+  #time to string
+  timeago: ^3.6.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
