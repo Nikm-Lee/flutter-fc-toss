@@ -27,7 +27,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 onTap: () {
                   NotificationDialog([
                     notificationDummies[0],
-                    notificationDummies[1],
                   ]).show();
                 },
               ),

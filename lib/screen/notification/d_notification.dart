@@ -21,7 +21,7 @@ class _NotificationDialogState extends DialogState<NotificationDialog> {
     return Material(
       type: MaterialType.transparency,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ...widget.notification
               .map(

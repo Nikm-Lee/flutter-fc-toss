@@ -126,6 +126,7 @@ class MainScreenState extends State<MainScreen>
           (tab, index) => tab.toNavigationBarItem(
             context,
             isActivated: _currentIndex == index,
+            
           ),
         )
         .toList();
