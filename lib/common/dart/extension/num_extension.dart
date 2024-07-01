@@ -27,4 +27,6 @@ extension DoubleExt on double {
   String toComma() {
     return decimalFormat.format(this);
   }
+
+  double toPrecision(int n) => double.parse(toStringAsFixed(n));
 }
