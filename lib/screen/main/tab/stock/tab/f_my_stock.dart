@@ -14,7 +14,8 @@ class MyStockFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(bottom: MainScreenState.bottomNavigationBarHeight),
+      padding: const EdgeInsets.only(
+          bottom: MainScreenState.bottomNavigationBarHeight),
       child: Column(
         children: [
           getMyAccount(context),
@@ -36,10 +37,11 @@ class MyStockFragment extends StatelessWidget {
             Row(
               children: [
                 '443원'.text.size(24).bold.make(),
+                width10,
                 const Arrow(),
                 emptyExpanded,
                 RoundedContainer(
-                  backgroundColor: context.appColors.roundedLayoutBackground,
+                  backgroundColor: context.appColors.buttonBackground,
                   padding:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                   radius: 8,
@@ -53,8 +55,11 @@ class MyStockFragment extends StatelessWidget {
               color: context.appColors.divider,
             ),
             height10,
-            LongButton(title: '주문내역'),
-            LongButton(title: '판매수익'),
+             LongButton(
+              title: '주문내역',
+              onTap: () => context.showSnackbar("주문내역"),
+            ),
+            const LongButton(title: '판매수익'),
           ],
         ),
       );

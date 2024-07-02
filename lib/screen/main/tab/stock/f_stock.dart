@@ -41,6 +41,7 @@ class _StockFragmentState extends State<StockFragment>
         SliverToBoxAdapter(
           child: Column(
             children: [
+              height10,
               title,
               tabBar,
               if (currentIndex == 0)
@@ -95,15 +96,11 @@ class _StockFragmentState extends State<StockFragment>
               controller: tabController,
               tabs: [
                 "내 주식".text.make(),
-                "오늘이 발견".text.make(),
+                "오늘의 발견".text.make(),
               ],
             ),
             const Line()
           ],
         ),
   );
-
-  Widget get myAccount => Placeholder();
-
-  Widget get myStocks => Placeholder();
 }
