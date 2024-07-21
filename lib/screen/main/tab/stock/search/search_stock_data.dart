@@ -1,7 +1,14 @@
 import 'package:fast_app_base/common/data/preference/app_preferences.dart';
 import 'package:fast_app_base/common/util/local_json.dart';
 import 'package:fast_app_base/screen/main/tab/stock/vo_simple_stock.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get/instance_manager.dart';
+
+abstract mixin class SearchStockDataProvider {
+  late final searchData = Get.find<SearchStockData>();
+}
 
 class SearchStockData extends GetxController {
   List<SimpleStock> stocks = [];
@@ -17,8 +24,31 @@ class SearchStockData extends GetxController {
   }
 
   Future<void> loadLocalStockJson() async {
-    final jsonList = await LocalJson.getObjectList<SimpleStock>("json/stock_list.json");
+    final jsonList =
+        await LocalJson.getObjectList<SimpleStock>("json/stock_list.json");
 
     stocks.addAll(jsonList);
+  }
+
+  void search(String keyword) {
+    if (keyword.isEmpty) {
+      autoCompleteList.clear();
+      return;
+    }
+
+    autoCompleteList.value =
+        stocks.where((element) => element.name.contains(keyword)).toList();
+
+    debugPrint(autoCompleteList.toString());
+  }
+
+  void addHistory(SimpleStock stock) {
+    if (!searchHistoryList.contains(stock.name)) {
+      searchHistoryList.add(stock.name);
+    }
+  }
+
+  void removeHistory(String stockName) {
+    searchHistoryList.remove(stockName);
   }
 }
