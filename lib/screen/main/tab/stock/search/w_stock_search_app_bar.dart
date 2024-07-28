@@ -1,10 +1,8 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/util/app_keyboard_util.dart';
 import 'package:fast_app_base/common/widget/w_arrow.dart';
-import 'package:fast_app_base/common/widget/w_tap.dart';
 import 'package:fast_app_base/common/widget/w_text_field_with_delete.dart';
 import 'package:flutter/material.dart';
-import 'package:nav/nav.dart';
 
 class StockSearchAppBar extends StatelessWidget implements PreferredSizeWidget {
   TextEditingController controller;
@@ -28,7 +26,6 @@ class StockSearchAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: TextFieldWithDelete(
               textInputAction: TextInputAction.search,
               onEditingComplete: () {
-                print("검색 확인버튼");
                 AppKeyboardUtil.hide(context);
               },
               controller: controller,

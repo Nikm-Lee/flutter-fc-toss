@@ -1,8 +1,6 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/w_round_button.dart';
 import 'package:fast_app_base/common/widget/w_rounded_container.dart';
-import 'package:fast_app_base/screen/notification/vo/vo_notification.dart';
-import 'package:fast_app_base/screen/notification/w_notification_item.dart';
 import 'package:flutter/material.dart';
 import 'package:nav/dialog/dialog.dart';
 

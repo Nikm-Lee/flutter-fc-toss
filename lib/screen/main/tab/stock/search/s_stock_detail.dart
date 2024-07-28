@@ -1,6 +1,5 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class StockDetailScreen extends StatelessWidget {
   final String stockName;

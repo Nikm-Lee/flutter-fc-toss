@@ -1,4 +1,3 @@
-import 'package:fast_app_base/common/constant/app_colors.dart';
 import 'package:fast_app_base/screen/notification/d_notification.dart';
 import 'package:fast_app_base/screen/notification/notification_dumy.dart';
 import 'package:fast_app_base/screen/notification/w_notification_item.dart';

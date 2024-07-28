@@ -1,4 +1,5 @@
 import 'package:fast_app_base/common/common.dart';
+import 'package:fast_app_base/common/dart/extension/num_extension.dart';
 import 'package:fast_app_base/common/widget/w_image_button.dart';
 import 'package:fast_app_base/screen/main/tab/stock/search/s_search_stock.dart';
 import 'package:fast_app_base/screen/main/tab/stock/setting/s_setting.dart';

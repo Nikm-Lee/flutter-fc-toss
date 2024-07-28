@@ -77,6 +77,10 @@ dependencies:
   #time to string
   timeago: ^3.6.1
 
+  #animation
+  flutter_animate: ^4.5.0
+  live_background: ^0.1.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
