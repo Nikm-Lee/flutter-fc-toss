@@ -1,3 +1,4 @@
+import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/screen/main/tab/home/banks_dummy.dart';
 import 'package:fast_app_base/screen/main/tab/home/vo/vo_bank_account.dart';
 
@@ -12,7 +13,7 @@ final bankAccountKakao =
     BankAccount(bankKaKao, 750000, accountTypeName: "입출금통장");
 
 main() {
-  print('test');
+
 }
 
 //List

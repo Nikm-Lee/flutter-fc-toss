@@ -3,4 +3,11 @@ class Bank {
   final String logoImagePath;
 
   Bank(this.name, this.logoImagePath);
+
+  @override
+  String toString() {
+    return name;
+  }
+
+  
 }
